@@ -1,0 +1,140 @@
+/* src/styles/Home.module.css - component specific */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  gap: 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.siteTitle {
+  font-size: 20px;
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  margin-right: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.searchWrap {
+  min-width: 260px;
+}
+.searchInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+.searchInput:focus { box-shadow: 0 0 0 3px rgba(0,112,243,0.08); border-color: #0070f3; }
+
+/* Main area */
+.main {
+  padding: 28px 36px;
+}
+.h1 {
+  font-size: 36px;
+  margin: 6px 0 10px;
+}
+.h2 {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(18,18,18,0.06); }
+
+.imageWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 12px;
+}
+.productImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-size: 16px;
+  margin: 12px 6px;
+  line-height: 1.25;
+  color: #222;
+  flex-grow: 1;
+}
+
+.price {
+  font-weight: 700;
+  color: #444;
+  margin-top: 12px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 32px;
+  padding: 18px;
+  text-align: center;
+  color: #666;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .searchWrap { min-width: 180px; }
+  .h1 { font-size: 30px; }
+}
+@media (max-width: 640px) {
+  .header { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px; }
+  .headerRight { justify-content: space-between; }
+  .searchWrap { width: 100%; }
+  .main { padding: 18px; }
+  .card { min-height: 320px; padding: 14px; }
+  .imageWrap { height: 160px; }
+}
